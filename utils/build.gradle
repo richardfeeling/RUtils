@@ -6,7 +6,7 @@ publish {
     userOrg = 'richardfeeling'//bintray.com用户名
     groupId = 'com.r'//jcenter上的路径,bintray上创建Package时填写的Version control项
     artifactId = 'RUtils'//项目名称，bintray上创建Package时填写的Name项
-    publishVersion = '0.0.1'//版本号
+    publishVersion = '0.0.2'//版本号
     desc = 'An Android Context Utils'//描述，不重要
     website = 'https://github.com/richardfeeling/RUtils.git'//网站，最好有，不重要
 }

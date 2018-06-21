@@ -7,11 +7,6 @@ import android.view.Gravity;
 import android.widget.TextView;
 import android.widget.Toast;
 
-/**
- * Author: richardlee on 2018/4/24.
- * Email: richardfeeling@sina.com
- */
-
 public class ToastUtils {
 
     private static final int toastBg = R.drawable.toast_bg;

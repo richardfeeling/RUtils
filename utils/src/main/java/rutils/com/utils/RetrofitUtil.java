@@ -13,11 +13,6 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Author: richardlee on 2018/1/4.
- * Email: lichengzhe@isesol.com
- */
-
 public class RetrofitUtil {
 
     private static Retrofit retrofit;

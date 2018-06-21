@@ -66,10 +66,10 @@ public class ContextUtils {
     }
 
     /**
-     * 单位转换: dp -> px
+     * 单位转换: dp - px
      *
-     * @param dp
-     * @return
+     * @param dp dip value
+     * @return pixel value
      */
     public static int dp2px(int dp) {
         DisplayMetrics displayMetrics = new DisplayMetrics();
@@ -79,10 +79,10 @@ public class ContextUtils {
     }
 
     /**
-     * 单位转换:px -> dp
+     * 单位转换:px - dp
      *
      * @param px
-     * @return
+     * @return dip value
      */
     public static int px2dp(int px) {
         DisplayMetrics displayMetrics = new DisplayMetrics();
