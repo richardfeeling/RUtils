@@ -8,6 +8,8 @@ import android.support.annotation.ColorRes;
 import android.support.annotation.DrawableRes;
 import android.support.annotation.StringRes;
 import android.support.v4.content.ContextCompat;
+import android.util.DisplayMetrics;
+import android.view.WindowManager;
 
 public class ContextUtils {
 
@@ -61,5 +63,45 @@ public class ContextUtils {
 
         }
         return 0;
+    }
+
+    /**
+     * 单位转换: dp -> px
+     *
+     * @param dp
+     * @return
+     */
+    public static int dp2px(int dp) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay().getMetrics(displayMetrics);
+        return (int) (displayMetrics.density * dp + 0.5);
+    }
+
+    /**
+     * 单位转换:px -> dp
+     *
+     * @param px
+     * @return
+     */
+    public static int px2dp(int px) {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay().getMetrics(displayMetrics);
+        return (int) (px / displayMetrics.density + 0.5);
+    }
+
+    public static int screenWidth() {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.widthPixels;
+    }
+
+    public static int heightWidth() {
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        ((WindowManager) context.getApplicationContext().getSystemService(Context.WINDOW_SERVICE))
+                .getDefaultDisplay().getMetrics(displayMetrics);
+        return displayMetrics.heightPixels;
     }
 }
